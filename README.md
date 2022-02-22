@@ -47,4 +47,14 @@ The code is contained as a class in `subdocument_mutations.py`. You can import t
   mutator = sdm.subdocument_mutation()
   
   update_statement = mutator.generate_update_statement(document, mutations)
-```
+```  
+  
+# Additional Notes
+* Approximately 3.5 hrs was spent on this
+* If I spent more time on this I would:
+*   Add more unit tests for the class, especially the private methods
+*   Add more exception handling around edge cases, so that I could provide clear error messages around
+*       Updates to sub elements where the specified id doesn't exist
+*       More validation around paths to ensure the path specified in the mutations actually exists. Would work to find a way to fail fast here.
+*       Validate the format of provided mutations to ensure they are in the appropriate format
+*   Look for ways to break up the code into smaller methods to help facilitate better, more focused, unit tests
